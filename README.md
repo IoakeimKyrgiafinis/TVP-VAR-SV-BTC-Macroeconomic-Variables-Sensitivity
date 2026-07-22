@@ -62,18 +62,9 @@ Raw daily series are forward-filled, merged to a common calendar, then sampled a
 install.packages(c("quantmod", "fredr", "xts", "bvarsv", "vars", "coda"))
 ```
 
-For locked reproducibility (recommended):
 
-```r
-install.packages("renv")
-renv::restore()  # uses renv.lock
-```
 
-### 2. Run the script
 
-```r
-source("R/btc_tvpvar_full.R")
-```
 
 The script runs end-to-end in numbered steps:
 
@@ -92,11 +83,11 @@ The script runs end-to-end in numbered steps:
 | 12 | Cumulative IRFs — point-in-time and continuous (Figs 27–46) |
 | — | Export all plots to `BTC_TVP_VAR_Plots.pdf` |
 
-> **Runtime note:** The MCMC estimation (Step 6) takes approximately **2–4 hours** on a modern laptop for 30,000 iterations. To skip re-estimation, load the saved model object:
+> **Runtime note:** The MCMC estimation (Step 6) takes approximately **2–4 hours** on a modern laptop for 30,000 iterations.
 > ```r
 > fit_tvp <- readRDS("output/fit_tvp_6var.rds")
 > ```
-> then run steps 7 onwards.
+> 
 
 ---
 
