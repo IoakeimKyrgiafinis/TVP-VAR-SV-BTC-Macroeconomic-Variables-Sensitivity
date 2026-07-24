@@ -13,6 +13,7 @@ The central question: has Bitcoin evolved from an isolated speculative asset int
 
 The model is identified via Cholesky decomposition of the time-varying covariance matrix. Inference is conducted through Bayesian MCMC (30,000 draws, 15,000 burn-in) using the [`bvarsv`](https://cran.r-project.org/package=bvarsv) package in R.
 
+This paper is inspired by Panagiotidis, Stengos, and Vravosinos (2019), who examine the effects of stock market returns, exchange rates, gold, oil, central bank rates, and internet search intensity on bitcoin returns using standard VAR and Factor-Augmented VAR (FAVAR) models.This paper builds on their work by allowing the transmission mechanism to vary continuously over time via a TVP-VAR-SV specification, enabling us to trace how bitcoin's sensitivity to macroeconomic financial shocks has evolved across different market regimes, something that static VAR and FAVAR models are not designed to capture.
 ---
 
 ## Key Findings
